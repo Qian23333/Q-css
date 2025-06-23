@@ -1,0 +1,400 @@
+/* 修复透射的群应用 */
+.chat-header {
+  backdrop-filter: none;
+  z-index: initial;
+}
+
+/* 隐藏QQ空间 */
+.nav-item[data-v-4e569607] {
+    display: none !important;
+}
+
+/* ==============================================
+   广告隐藏
+   ============================================== */
+
+/* 隐藏广告包装器 */
+.ad-wrapper {
+  display: none !important;
+}
+
+/* 隐藏纹理背景包装器 */
+.texture-background-wrapper {
+  display: none !important;
+}
+
+/* ==============================================
+   背景透明化设置
+   ============================================== */
+
+/* 删除各种界面元素的背景 */
+.contact,
+.recent-contact,
+.viewport-list .recent-contact-item.recent-contact-item--selected,
+.file-element,
+.draggable-view__container,
+.stacked-msg-btn,
+.main-window,
+.sys-notify,
+.file-list-normal-scroll-container,
+.chat-input-area,
+.tab-container,
+.profile,
+.login-panel,
+/* 文件管理页面文件列表下面的白条 */
+.file-area .loadmore-placeholder,
+/* 文件管理页面群文件群列表 */
+.group-file-container,
+.q-collapse-item,
+.q-collapse-item .q-collapse-item__header,
+/* 文件管理页面类型列表 */
+.file-type-container,
+/* 文件管理页面类型图片与视频 */
+.file-list-grid-scroll-container,
+.file-list-header,
+/* 文件管理页面群文件footer */
+.file-area-container-group-file-footer,
+/* 收藏左侧列表 */
+.favorites-layout,
+.favorites-layout__left-area,
+/* 收藏右侧 */
+.favorites-layout__right-area,
+.favorites-layout__content,
+.favorites-header,
+html,
+body,
+.app,
+/* 查看图片顶栏 */
+.main-area__header {
+  background: initial !important;
+}
+
+/* 删除侧边栏背景 */
+.draggable-view__container.sidebar,
+.draggable-view__container.sidebar .sidebar-nav
+{
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+/* 删除设置背景 */
+.nav-bar-container,
+.file-manager-main,
+.setting-tab,
+.setting-main {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+/* ==============================================
+   布局和圆角优化
+   ============================================== */
+
+
+/* 折叠组件的布局样式 */
+.q-collapse,
+.q-collapse-item__content__inner,
+.q-collapse-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+/* 折叠组件的圆角 */
+.q-collapse,
+.q-collapse-item__content__inner,
+.q-collapse-item {
+  border-radius: 8px;
+}
+
+/* 视图列表内部容器布局 */
+.viewport-list__inner:has(.group-user) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+/* 视图列表内部容器布局（更大的内边距）（配合悬停动画） */
+.viewport-list__inner:has(.recent-contact-item) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+}
+
+.viewport-list__inner:has(.list-item) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 系统通知和好友通知列表项圆角 */
+.sys-notify__container .sys-notify-card,
+.sys-notify__container .recent-contact-item {
+  border-radius: 8px;
+}
+
+/* 消息列表项圆角 */
+.viewport-list .recent-contact-item,
+.viewport-list__inner .list-item {
+  border-radius: 16px;
+}
+
+/* 聊天输入框圆角（上方圆角） */
+.chat-input-area {
+  border-radius: 16px 16px 0px 0px;
+}
+
+/* 文件管理文件列表块间距 */
+.file-list-normal-sort,
+/* 文件管理类型图片与视频间距 */
+.file-list-grid-scroll-container>* {
+  margin-bottom: 16px;
+}
+
+/* ==============================================
+   视觉效果增强
+   ============================================== */
+
+/* 为文件和标签页添加模糊效果 */
+.normal-file,
+.radio-tab {
+  backdrop-filter: blur(8px);
+}
+
+/* 文件管理发送人列表背景移除 */
+.file-manager-main .q-collapse-item {
+  background: none !important;
+}
+
+/* 文件管理各种列表项圆角设置 */
+.file-manager-main .q-collapse-item__title,
+.file-manager-main .file-type,
+.file-manager-main .user-item-container {
+  border-radius: 8px !important;
+}
+
+/* 登录页面QQ图标样式重置 */
+.qq-icon-font {
+  transform: none !important;
+}
+
+/* 查看图片界面工具栏模糊效果 */
+.main-area__header {
+  backdrop-filter: blur(8px) !important;
+}
+
+/* ==============================================
+  浅色模式样式
+  ============================================== */
+
+@media (prefers-color-scheme: light) {
+
+  /* 多选消息的按钮背景（浅色） */
+  .forward-ops .op-icon {
+    background: #00000021 !important;
+  }
+
+  /* 聊天界面更多面板样式（浅色） */
+  .side-panel {
+    box-shadow: 0 4px 6px 0px #00000010 !important;
+    background: #f8f8f8 !important;
+    backdrop-filter: blur(32px) saturate(150%) opacity(40%);
+    mix-blend-mode: multiply;
+  }
+
+  /* 聊天界面回顶按钮和回底按钮（浅色） */
+  .chat-msg-area__tip--top-btn,
+  .chat-msg-area__tip--bottom {
+    background: #f8f8f87f !important;
+    backdrop-filter: blur(32px);
+  }
+
+  /* 消息列表项悬停效果 */
+  .viewport-list .recent-contact-item:hover {
+    background-color: #0000003f !important;
+  }
+
+  /* 
+  浅色模式下各种界面卡片背景设置：
+  - 文件管理文件列表块
+  - 文件管理文件列表标题
+  - 文件管理类型图片与视频
+  - 设置列表项卡片
+  - 设置消息通知列表项卡片消息组
+  - Windows设置存储管理列表项卡片
+  - 设置快捷键列表项卡片
+  - 设置权限设置列表项卡片
+  - 设置超级调色盘列表项卡片
+  - BetterQQNT主体&插件配置界面
+  */
+  .file-list-normal-sort,
+  .file-list-normal-sort-title,
+  .file-list-grid-scroll-container>*,
+  .group-file-banner,
+  .shortcut-item,
+  .viewport-list .recent-contact-item.recent-contact-item--selected,
+  .setting-main__content>*>*:not(.appearance-tab)>*:not(.setting-item-title, .popup, .storage-space, .shotcut, .group-msg-title, .add-perm):not(:has(.bqqnt-block)),
+  .setting-main__content .popup>*:not(.setting-item-title),
+  .setting-main__content .group-msg-container>*:not(.setting-item-title),
+  .setting-main__content .add-perm>*:not(.setting-item-title),
+  .setting-main__content .storage-space>*:not(.setting-item-title, .storage-chart, .title),
+  .setting-main__content .shotcut>*,
+  .setting-main__content .system-themes-categories>*,
+  .setting-main__content .use-btn,
+  .message-content__wrapper,
+  .bqqnt-block .bqqnt-content {
+   background: #00000021 !important;
+   border-radius: 8px;
+  }
+
+  .file-element,
+  .forward-msg {
+   background: #ffffff40 !important;
+  }
+
+  .file-element:hover,
+  .forward-msg:hover {
+   background: #ffffff60 !important;
+  }
+
+  /* 窗口控制区域和设置按钮图标颜色 */
+  #app>div>div.window-control-area>div>i>svg>path,
+  #app>div>div.setting>i>svg>path {
+   fill: #000000 !important;
+  }
+
+  /* 去除VIP红色昵称，改为黑色 */
+  .vip-name {
+   color: #000000 !important;
+  }
+}
+
+/* ==============================================
+   深色模式样式
+   ============================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  /* 多选消息的按钮背景（深色） */
+  .forward-ops .op-icon {
+    background: #ffffff21 !important;
+  }
+
+  /* 聊天界面更多面板样式（深色） */
+  .side-panel {
+    box-shadow: 0 4px 6px 0px #00000010 !important;
+    background: #171717 !important;
+    backdrop-filter: blur(32px) saturate(150%) opacity(40%);
+    mix-blend-mode: multiply;
+  }
+
+  /* 聊天界面回顶按钮和回底按钮（深色） */
+  .chat-msg-area__tip--top-btn,
+  .chat-msg-area__tip--bottom {
+    background: #1717177f !important;
+    backdrop-filter: blur(32px);
+  }
+
+  /* 消息列表项悬停效果 */
+  .viewport-list .recent-contact-item:hover {
+    background-color: #ffffff3f !important;
+  }
+
+  /* 
+  深色模式下各种界面卡片背景设置：
+  - 文件管理文件列表块
+  - 文件管理文件列表标题
+  - 文件管理类型图片与视频
+  - 设置列表项卡片
+  - 设置消息通知列表项卡片消息组
+  - Windows设置存储管理列表项卡片
+  - 设置快捷键列表项卡片
+  - 设置权限设置列表项卡片
+  - 设置超级调色盘列表项卡片
+  - BetterQQNT主体&插件配置界面
+  */
+  .file-list-normal-sort,
+  .file-list-normal-sort-title,
+  .file-list-grid-scroll-container>*,
+  .group-file-banner,
+  .shortcut-item,
+  .viewport-list .recent-contact-item.recent-contact-item--selected,
+  .setting-main__content>*>*:not(.appearance-tab)>*:not(.setting-item-title, .popup, .storage-space, .shotcut, .group-msg-title, .add-perm):not(:has(.bqqnt-block)),
+  .setting-main__content .popup>*:not(.setting-item-title),
+  .setting-main__content .group-msg-container>*:not(.setting-item-title),
+  .setting-main__content .add-perm>*:not(.setting-item-title),
+  .setting-main__content .storage-space>*:not(.setting-item-title, .storage-chart, .title),
+  .setting-main__content .shotcut>*,
+  .setting-main__content .system-themes-categories>*,
+  .setting-main__content .use-btn,
+  .message-content__wrapper,
+  .bqqnt-block .bqqnt-content {
+    background: #ffffff21 !important;
+    border-radius: 8px;
+  }
+
+  .file-element,
+  .forward-msg {
+   background: #00000040 !important;
+  }
+
+  .file-element:hover,
+  .forward-msg:hover {
+   background: #00000060 !important;
+  }
+
+  /* 窗口控制区域和设置按钮图标颜色 */
+  #app>div>div.window-control-area>div>i>svg>path,
+  #app>div>div.setting>i>svg>path {
+    fill: #ffffff !important;
+  }
+
+  /* 去除VIP红色昵称，改为白色 */
+  .vip-name {
+    color: #ffffff !important;
+  }
+}
+
+/* ==============================================
+   鼠标交互动画效果
+   ============================================== */
+
+/* 最近联系人列表项鼠标悬停动画 */
+.recent-contact-item,
+.list-item {
+  transition: transform .2s;
+}
+
+/* 悬停时的缩放效果 */  
+.recent-contact-item:hover,
+.recent-contact-item:focus,
+.recent-contact-item:active,
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
+  transform: scale(1.1);
+}
+
+/* 光效动画的伪元素 */
+.recent-contact-item:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: -120px;
+  width: 80px;
+  height: 250px;
+  opacity: 80%;
+  background-image: linear-gradient(to left,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.65),
+          rgba(255, 255, 255, 0));
+  transform: rotate(45deg);
+}
