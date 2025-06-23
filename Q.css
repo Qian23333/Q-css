@@ -82,6 +82,7 @@ body,
 /* 删除设置背景 */
 .nav-bar-container,
 .file-manager-main,
+.add-perm,
 .setting-tab,
 .setting-main {
   background: transparent !important;
