@@ -61,9 +61,6 @@
 .favorites-layout__right-area,
 .favorites-layout__content,
 .favorites-header,
-html,
-body,
-.app,
 /* 查看图片顶栏 */
 .main-area__header {
   background: initial !important;
@@ -71,17 +68,10 @@ body,
 
 /* 删除侧边栏背景 */
 .draggable-view__container.sidebar,
-.draggable-view__container.sidebar .sidebar-nav
-{
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  backdrop-filter: none !important;
-}
-
-/* 删除设置背景 */
+.draggable-view__container.sidebar .sidebar-nav,
 .nav-bar-container,
 .file-manager-main,
+/* 删除设置背景 */
 .add-perm,
 .setting-tab,
 .setting-main {
