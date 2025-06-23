@@ -103,7 +103,7 @@
   border-radius: 8px;
 }
 
-/* 视图列表内部容器布局 */
+/* 群成员列表内边距 */
 .viewport-list__inner:has(.group-user) {
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@
   padding: 4px;
 }
 
-/* 视图列表内部容器布局（更大的内边距）（配合悬停动画） */
+/* 聊天列表内边距*/
 .viewport-list__inner:has(.recent-contact-item) {
   display: flex;
   flex-direction: column;
@@ -119,6 +119,7 @@
   padding: 20px;
 }
 
+/* 联系人列表内边距*/
 .viewport-list__inner:has(.list-item) {
   display: flex;
   flex-direction: column;
@@ -133,13 +134,9 @@
 
 /* 消息列表项圆角 */
 .viewport-list .recent-contact-item,
+.viewport-list .recent-contact-item.recent-contact-item--selected,
 .viewport-list__inner .list-item {
-  border-radius: 16px;
-}
-
-/* 聊天输入框圆角（上方圆角） */
-.chat-input-area {
-  border-radius: 16px 16px 0px 0px;
+  border-radius: 16px !important;
 }
 
 /* 文件管理文件列表块间距 */
@@ -241,8 +238,8 @@
   .setting-main__content .use-btn,
   .message-content__wrapper,
   .bqqnt-block .bqqnt-content {
-   background: #00000021 !important;
-   border-radius: 8px;
+    background: #00000021 !important;
+    border-radius: 8px;
   }
 
   .file-element,
