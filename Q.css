@@ -242,16 +242,6 @@
     border-radius: 8px;
   }
 
-  .file-element,
-  .forward-msg {
-    background: #ffffff40 !important;
-  }
-
-  .file-element:hover,
-  .forward-msg:hover {
-    background: #ffffff60 !important;
-  }
-
   /* 窗口控制区域和设置按钮图标颜色 */
   #app>div>div.window-control-area>div>i>svg>path,
   #app>div>div.setting>i>svg>path {
@@ -328,16 +318,6 @@
     border-radius: 8px;
   }
 
-  .file-element,
-  .forward-msg {
-    background: #00000040 !important;
-  }
-
-  .file-element:hover,
-  .forward-msg:hover {
-    background: #00000060 !important;
-  }
-
   /* 窗口控制区域和设置按钮图标颜色 */
   #app>div>div.window-control-area>div>i>svg>path,
   #app>div>div.setting>i>svg>path {
@@ -353,6 +333,18 @@
 /* ==============================================
    鼠标交互动画效果
    ============================================== */
+
+
+/* 文件和合并转发消息*/
+.file-element,
+.forward-msg {
+  background: rgb(var(--bqqnt-base-bg-color), 0.29) !important;
+}
+
+.file-element:hover,
+.forward-msg:hover {
+  background: rgb(var(--bqqnt-base-bg-color), 0.39) !important;
+}
 
 /* 最近联系人列表项鼠标悬停动画 */
 .recent-contact-item,
