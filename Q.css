@@ -359,7 +359,7 @@
 .list-item:hover,
 .list-item:focus,
 .list-item:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* 光效动画的伪元素 */
