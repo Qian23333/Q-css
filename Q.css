@@ -92,8 +92,8 @@
 .q-collapse-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px;
+  gap: 2px;
+  padding: 2px;
 }
 
 /* 折叠组件的圆角 */
@@ -334,8 +334,7 @@
    鼠标交互动画效果
    ============================================== */
 
-
-/* 文件和合并转发消息*/
+/* 合并转发消息*/
 .file-element,
 .forward-msg {
   background: rgb(var(--bqqnt-base-bg-color), 0.29) !important;
