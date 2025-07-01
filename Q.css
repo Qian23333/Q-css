@@ -150,8 +150,20 @@
    视觉效果增强
    ============================================== */
 
-/* 为文件和标签页添加模糊效果 */
-.normal-file,
+/* 文件和合并转发消息颜色*/
+.file-element,
+.forward-msg {
+  background: rgb(var(--bqqnt-base-bg-color), 0.29) !important;
+  backdrop-filter: blur(8px);
+}
+
+.file-element:hover,
+.forward-msg:hover {
+  background: rgb(var(--bqqnt-base-bg-color), 0.39) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* 标签页添加模糊效果 */
 .radio-tab {
   backdrop-filter: blur(8px);
 }
@@ -179,8 +191,8 @@
 }
 
 /* ==============================================
-  浅色模式样式
-  ============================================== */
+   浅色模式样式
+   ============================================== */
 
 @media (prefers-color-scheme: light) {
 
@@ -333,17 +345,6 @@
 /* ==============================================
    鼠标交互动画效果
    ============================================== */
-
-/* 合并转发消息*/
-.file-element,
-.forward-msg {
-  background: rgb(var(--bqqnt-base-bg-color), 0.29) !important;
-}
-
-.file-element:hover,
-.forward-msg:hover {
-  background: rgb(var(--bqqnt-base-bg-color), 0.39) !important;
-}
 
 /* 最近联系人列表项鼠标悬停动画 */
 .recent-contact-item,
